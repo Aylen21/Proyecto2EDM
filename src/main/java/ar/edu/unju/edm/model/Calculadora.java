@@ -1,40 +1,44 @@
 package ar.edu.unju.edm.model;
 
 public class Calculadora {
-  private int a;
-  private int b;
+  private float a;
+  private float b;
   
   public Calculadora() {
 	  }
-  public int sumarDosnumeros() {
-	  int suma;
+  public float sumarDosnumeros() {
+	  float suma;
 	  suma = a + b;
 	  return suma;
 	  
   }
+  
+  public float dividirDosnumeros() {
+	  
+  float division;
+  division=0;
+  if(b==0) {
+	  System.out.println("No se puede dividir por 0");
+  }
+  else {
+  division=a/b;
+  
+  }
+  return division;
+  
+  }
 
-public int getA() {
+public float getA() {
 	return a;
 }
-
-public void setA(int a) {
+public void setA(float a) {
 	this.a = a;
 }
-
-public int getB() {
+public float getB() {
 	return b;
 }
-
-public void setB(int b) {
+public void setB(float b) {
 	this.b = b;
-}
-@Override
-public int hashCode() {
-	final int prime = 31;
-	int result = 1;
-	result = prime * result + a;
-	result = prime * result + b;
-	return result;
 }
 @Override
 public boolean equals(Object obj) {
